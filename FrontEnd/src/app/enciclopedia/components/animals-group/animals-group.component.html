@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-12 col-md-6 col-lg-4 my-3" *ngFor="let animal of animales; let i=index">
+        
+      <a (click)="seleccionar(i)" >
+
+        <div class="card bg-dark text-white my-3">
+          <img [src]="animal.url" class="card-img" alt="...">
+         
+          <div class="card-img-overlay">
+            <h5 class="card-title">{{animal.name}}</h5>
+            <p class="card-text pocoTexto">{{animal.description}}</p>
+            <p class="card-text">{{animal.lifeExpectancy}}</p>
+          </div>
+        
+        </div>
+      
+      </a>
+
+    </div>
+</div>
+
+

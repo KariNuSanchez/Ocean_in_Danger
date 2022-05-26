@@ -1,0 +1,26 @@
+h1{ 
+    font-size: 50px;
+    text-align: center;
+    font-weight: 400;
+    
+    padding: 1px;
+}
+h2{
+    text-align: center;
+    font-weight: 400;
+    padding: 1px;
+}
+hr{
+    color: #0052b7;
+    border: 0; border-top: 1px solid #0052b7; border-bottom: 1px solid #0052b7; height:0;
+    
+}
+.about {
+    text-align: right;
+    word-wrap: break-word;
+  }
+  img{
+    margin-top: 10px;
+    max-width: 40%;
+    max-height: 40%;
+}

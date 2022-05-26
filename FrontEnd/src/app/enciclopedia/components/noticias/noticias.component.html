@@ -1,0 +1,18 @@
+<h1 style="color: #454545; font-weight: 700;" class="text-center">News</h1>
+<hr>
+
+<div class="row">
+    <div class="col-xxl-3 col-lg-4 col-md-6 my-3" *ngFor="let noticia of noticias; let i=index">
+        <a [href]="noticia.url">
+            <div class="card mx-auto" style="width: 18rem;" *ngIf="i<=7">
+                <div class="img">
+                    <img [src]="noticia.image" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title cantidad-text">{{noticia.title}}</h5>
+                    <p class="card-text cantidad-text">{{noticia.description}}</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

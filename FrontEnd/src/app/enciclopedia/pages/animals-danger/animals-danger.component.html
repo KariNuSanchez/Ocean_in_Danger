@@ -1,0 +1,44 @@
+<app-browser (onDebounce)="sugerencias($event)" (onEnter)="buscar($event)"></app-browser>
+
+<div class="bg py-4">
+    <div class="container py-4">
+        <div class="row justify-content-between">
+          <div class="pb-5 bg2" [class]="cardClass()">
+            <div class="d-flex justify-content-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-fish" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M16.69 7.44a6.973 6.973 0 0 0 -1.69 4.56c0 1.747 .64 3.345 1.699 4.571" />
+                <path d="M2 9.504c7.715 8.647 14.75 10.265 20 2.498c-5.25 -7.761 -12.285 -6.142 -20 2.504" />
+                <path d="M18 11v.01" />
+                <path d="M11.5 10.5c-.667 1 -.667 2 0 3" />
+              </svg>
+              <h1 class="text-center fuentePoppins">Animals</h1>
+            </div>
+            
+            <hr>
+            <app-animals-group [animales]="animales" (Index)="cardSeleccionado($event)"></app-animals-group>
+          
+          </div>
+          
+          <!-- Card derecha -->
+          <div class="col-md-4 bg2" *ngIf="cardActiva" >
+            
+              <img [src]="animales[index].url" class="card-img-top rounded my-3" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{animales[index].name}}</h5>
+                <p class="card-text">{{animales[index].description}}</p>
+              </div>
+              <ul class="list-group list-group-flush mt-3">
+                <li class="list-group-item">Cientific Name: {{animales[index].cientificName}}</li>
+                <li class="list-group-item">Region: {{animales[index].region}}</li>
+                <li class="list-group-item">Diet: {{animales[index].diet}}</li>
+                <li class="list-group-item">Diet: {{animales[index].maxWeight}}</li>
+                <li class="list-group-item">Diet: {{animales[index].minWeight}}</li>
+                <li class="list-group-item">Diet: {{animales[index].color}}</li>
+              </ul>           
+          </div>
+
+
+        </div>
+    </div>
+</div>

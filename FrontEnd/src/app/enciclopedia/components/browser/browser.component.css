@@ -1,0 +1,66 @@
+section{
+    height: 400px;
+    position: relative;
+    background-image: url('../../../../assets/fondobuscador.jpg');
+    background-size: cover;
+}
+form{
+    width: 50%;
+}
+
+.contenido{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input{
+    border: 2px solid #fff;
+    background: 0 0;
+    height: 40px;
+    width: 430px;
+    padding: 5px;
+    max-width: 90%;
+    vertical-align: top;
+    color: #fff;
+}
+.noradius{
+    border-radius: 0;
+}
+
+.a{
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: "Montserrat",sans-serif;
+}
+
+
+@media (min-width:768px){
+    .a{
+        font-size: 30px;
+    }
+
+    
+}
+@media (min-width:992px){
+    .a{
+        font-size: 40px;
+    }
+    form{
+        width: auto;
+    }
+    
+}
+
+@media (min-width:1200px){
+    .a{
+        font-size: 50px;
+    }
+}

@@ -1,0 +1,31 @@
+<h1 style="color: #454545; font-weight: 700;" class="text-center">Do you know of any endangered species not listed here?</h1>
+<form autocomplete="off" [formGroup]="miFormulario">
+    
+    <div class="mb-3">
+        <label for="nameAnimal" class="form-label">Name of animal</label>
+        <input formControlName="name" type="text" class="form-control" id="nameAnimal">
+    </div>
+
+    <div class="mb-3">
+        <label for="DataAnimal" class="form-label">Animal data</label>
+        <input type="text" formControlName="data" class="form-control" id="DataAnimal">
+    </div>
+
+    <label for="animal_photo" class="form-label">Picture of the animal</label>
+    <div class="input-group mb-3">
+        <input type="file" class="form-control" formControlName="photo" id="animal_photo">
+        <label class="input-group-text" for="animal_photo">Upload photo</label>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1">
+        </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
